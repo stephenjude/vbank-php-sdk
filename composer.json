@@ -1,6 +1,6 @@
 {
     "name": "vbanksdk/vbank-php-sdk",
-    "description": "PHP SDK to easily work with the VDF Microfinance Bank APIs.",
+    "description": "Laravel SDK to easily work with the VDF Microfinance Bank APIs.",
     "keywords": [
         "VDF Bank SDK",
         "vbank-php-sdk"
