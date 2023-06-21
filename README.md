@@ -1,4 +1,4 @@
-# PHP SDK to easily work with the VDF Microfinance Bank APIs.
+# VBank Laravel SDK
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vbanksdk/vbank-php-sdk.svg?style=flat-square)](https://packagist.org/packages/vbanksdk/vbank-php-sdk)
 [![Tests](https://img.shields.io/github/actions/workflow/status/vbanksdk/vbank-php-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vbanksdk/vbank-php-sdk/actions/workflows/run-tests.yml)
