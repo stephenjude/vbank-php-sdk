@@ -36,7 +36,7 @@ trait ManagesVirtualAccount
 
     public function updateVirtualAccountTransactionAmount(int|float $amount, $accountReference): self
     {
-        $response = $this->send(
+        return $this->send(
             method: Method::POST,
             uri: 'wallet2/virtualaccount/amountupdate',
             payload: [
@@ -44,7 +44,5 @@ trait ManagesVirtualAccount
                 "reference" => $accountReference,
             ]
         );
-
-        return $response;
     }
 }

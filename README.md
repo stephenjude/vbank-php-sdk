@@ -25,8 +25,39 @@ composer require vbanksdk/vbank-php-sdk
 ## Usage
 
 ```php
-$skeleton = new VBankSDK\VBank();
-echo $skeleton->echoPhrase('Hello, VBankSDK!');
+$vdf = new VBank\SDK\VBank(ACCESSTOKEN, APIKEY, APISECRET);
+
+$vdf->onboard(USERNAME, WALLETNAME, SHORTNAME, WEBHOOKURL,IMPLEMENTATION); // Returns array
+
+// Get your coporate acount details
+$vdf->corporateAccount(); // Returns instance of CorporateAccount  resource class
+
+// Create fixed bank account with customer's full details
+$vdf->createFixedAccount(firstname, lastname, middlename, dateOfBirth, address, gender, phone, bvn); // Returns instance of FixedAccount  resource class
+
+// Create fixed bank account with customer's BVN and date of birth.
+$vdf->createFixedAccountWithBVN(bvn, dateOfBirth); // Returns instance of FixedAccount  resource class
+
+// Create fixed corporate bank account.
+$vdf->createFixedCorporateAccount(rcNumber, companyName, incorporationDate, bvn); // Returns instance of FixedCorporateAccount  resource class
+
+// Create virtual account with expiry time.
+$vdf->createVirtualAccount(amount, reference, validityTimeout, merchantId, merchantName); // Returns instance of VirtualAccount  resource class
+
+// Update valid amount for virtual account transaction.
+$vdf->updateVirtualAccountTransactionAmount(amount, accountReference); // Returns instance of VirtualAccount  resource class
+
+// List banks 
+$vdf->bankList();
+
+// Resolve bank account
+$vdf->validateBankAccount(accountNumber, bankCode, TransferType::INTER); // Returns instance of Beneficiary resource class
+
+// Intiate bank transfer
+$vdf->initiateTransfer(corporateAccount, beneficiary, amount, reference, narration); // Returns instance of Transfer resource class
+
+// Get transaction details 
+$vdf->transactionDetails(transactionId): // Returns instance of Transaction resource class
 ```
 
 ## Testing
