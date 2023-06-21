@@ -17,7 +17,7 @@ class Transfer extends AbstractResource
         $response = $this->vbank->send(
             method: Method::GET,
             uri: 'wallet2/transactions',
-            payload: ["reference" => $this->txnId]
+            payload: ['reference' => $this->txnId]
         );
 
         return new Transaction($response);

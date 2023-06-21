@@ -33,14 +33,14 @@ trait ManagesAccount
             method: Method::POST,
             uri: 'wallet2/client/create',
             payload: array_filter([
-                "firstname" => $firstname,
-                "lastname" => $lastname,
-                "middlename" => $middlename,
-                "dob" => $dateOfBirth,
-                "address" => $address,
-                "gender" => $gender,
-                "phone" => $phone,
-                "bvn" => $bvn,
+                'firstname' => $firstname,
+                'lastname' => $lastname,
+                'middlename' => $middlename,
+                'dob' => $dateOfBirth,
+                'address' => $address,
+                'gender' => $gender,
+                'phone' => $phone,
+                'bvn' => $bvn,
             ])
         );
 
@@ -54,7 +54,7 @@ trait ManagesAccount
             uri: 'wallet2/client/create',
             payload: [
                 'bvn' => $bvn,
-                'dateOfBirth' => $dateOfBirth
+                'dateOfBirth' => $dateOfBirth,
             ]
         );
 
@@ -71,10 +71,10 @@ trait ManagesAccount
             method: Method::POST,
             uri: 'wallet2/corporateclient/create',
             payload: array_filter([
-                "rcNumber" => $rcNumber,
-                "companyName" => $companyName,
-                "incorporationDate" => $incorporationDate,
-                "bvn" => $bvn,
+                'rcNumber' => $rcNumber,
+                'companyName' => $companyName,
+                'incorporationDate' => $incorporationDate,
+                'bvn' => $bvn,
             ])
         );
 

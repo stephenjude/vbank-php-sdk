@@ -4,7 +4,6 @@ namespace VBank\SDK\Resources;
 
 class Transaction extends AbstractResource
 {
-
     public string $fromAccount;
 
     public string $fromClientId;
@@ -38,5 +37,4 @@ class Transaction extends AbstractResource
     public string $transferType;
 
     public string $reference;
-
 }

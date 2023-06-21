@@ -18,8 +18,8 @@ class VirtualAccount extends AbstractResource
             method: Method::POST,
             uri: 'wallet2/virtualaccount/amountupdate',
             payload: [
-                "amount" => $amount,
-                "reference" => $this->reference,
+                'amount' => $amount,
+                'reference' => $this->reference,
             ]
         );
 

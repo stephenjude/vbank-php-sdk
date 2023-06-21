@@ -26,7 +26,7 @@ trait ManagesVirtualAccount
             ]
         );
 
-        $response ['amount'] = $amount;
+        $response['amount'] = $amount;
 
         return new VirtualAccount(
             attributes: $response,
@@ -40,8 +40,8 @@ trait ManagesVirtualAccount
             method: Method::POST,
             uri: 'wallet2/virtualaccount/amountupdate',
             payload: [
-                "amount" => $amount,
-                "reference" => $accountReference,
+                'amount' => $amount,
+                'reference' => $accountReference,
             ]
         );
     }

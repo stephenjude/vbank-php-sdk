@@ -18,7 +18,7 @@ class CorporateAccount extends AbstractResource
 
     public function balance()
     {
-        return (float)$this->accountBalance;
+        return (float) $this->accountBalance;
     }
 
     public function companyName()
@@ -35,7 +35,7 @@ class CorporateAccount extends AbstractResource
     {
         return $this->accountNo;
     }
-    
+
     public function companyAccountID()
     {
         return $this->accountId;

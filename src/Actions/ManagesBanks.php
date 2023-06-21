@@ -41,8 +41,8 @@ trait ManagesBanks
         return new Beneficiary($response, $this);
     }
 
-
-    public function bvnEnquiry(string $bvn): CustomerBVN {
+    public function bvnEnquiry(string $bvn): CustomerBVN
+    {
         $response = $this->send(
             method: Method::GET,
             uri: 'wallet2/transfer/recipient',
@@ -59,5 +59,4 @@ trait ManagesBanks
 
         return new Beneficiary($response, $this);
     }
-
 }

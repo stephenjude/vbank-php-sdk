@@ -12,7 +12,7 @@ trait ManagesTransactions
         $response = $this->send(
             method: Method::GET,
             uri: 'wallet2/transactions',
-            payload: ["reference" => $transactionId]
+            payload: ['reference' => $transactionId]
         );
 
         return new Transaction($response, $this);
