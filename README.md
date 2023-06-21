@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/vbanksdk/vbank-php-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vbanksdk/vbank-php-sdk/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/vbanksdk/vbank-php-sdk.svg?style=flat-square)](https://packagist.org/packages/vbanksdk/vbank-php-sdk)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Laravel PHP SDK to easily work with the VDF Microfinance Bank APIs.
 
 ## Support us
 
