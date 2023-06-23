@@ -27,12 +27,11 @@ class VBank
 
     protected PendingRequest $request;
 
-    protected string $baseUrl = 'https://api-devapps.vfdbank.systems/vtech-wallet/api/v1';
-
     public function __construct(
         protected string $accessToken,
         protected ?string $apiKey = null,
         protected ?string $apiSecret = null,
+        protected string $baseUrl = 'https://api-devapps.vfdbank.systems/vtech-wallet/api/v1'
     ) {
         $this->request = Http::acceptJson()
             ->baseUrl($this->baseUrl)
