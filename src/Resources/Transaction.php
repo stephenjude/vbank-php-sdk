@@ -4,37 +4,34 @@ namespace VBank\SDK\Resources;
 
 class Transaction extends AbstractResource
 {
-    public string $fromAccount;
-
-    public string $fromClientId;
-
-    public string $fromClient;
-
-    public string $fromSavingsId;
-
-    public string $fromBvn;
-
-    public string $toClientId;
-
-    public string $toClient;
-
-    public string $toSavingsId;
-
-    public string $toSession;
-
-    public string $toBvn;
-
-    public string $toAccount;
-
-    public string $toBank;
-
-    public string $signature;
+    public string $TxnId;
 
     public string $amount;
 
-    public string $remark;
+    public string $accountNo;
 
-    public string $transferType;
+    public string $fromAccountNo;
 
-    public string $reference;
+    public string $transactionStatus;
+
+    public string $transactionDate;
+
+    public string $toBank;
+
+    public string $fromBank;
+
+    public string $sessionId;
+
+    public string $bankTransactionId;
+
+    public string $transactionType;
+
+    public function reference(): string
+    {
+        return $this->TxnId;
+    }
+    public function status(): string
+    {
+        return $this->transactionStatus === '00' ? 'successful' : 'failed';
+    }
 }
