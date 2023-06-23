@@ -30,6 +30,7 @@ class Transaction extends AbstractResource
     {
         return $this->TxnId;
     }
+
     public function status(): string
     {
         return $this->transactionStatus === '00' ? 'successful' : 'failed';
